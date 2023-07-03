@@ -3,13 +3,14 @@ const Application = () => {
     <>
       <h1>Job Application Form</h1>
       <h2>Section 1</h2>
-
+      <div data-testid="custom-element">Custom element</div>
       <form>
         <div>
           <label htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
+            placeholder="Fullname"
           />
         </div>
         <div>

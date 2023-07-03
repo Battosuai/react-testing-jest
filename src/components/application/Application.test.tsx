@@ -16,12 +16,18 @@ describe("Application", () => {
     const sectionHeading = screen.getByRole("heading", { level: 2 });
     expect(sectionHeading).toBeInTheDocument();
 
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
+
     const nameElement = screen.getByRole("textbox", { name: "Name" });
     expect(nameElement).toBeInTheDocument();
 
     // To check getByLabelText
     const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
     expect(nameElement2).toBeInTheDocument();
+
+    const nameElement3 = screen.getByPlaceholderText("Fullname");
+    expect(nameElement3).toBeInTheDocument();
 
     const bioElement = screen.getByRole("textbox", { name: "Bio" });
     expect(bioElement).toBeInTheDocument();
@@ -41,3 +47,11 @@ describe("Application", () => {
     expect(submitButtonElement).toBeInTheDocument();
   });
 });
+
+//getByText
+
+//getByDisplayValue
+
+//getByAltText
+
+//getByTitle
