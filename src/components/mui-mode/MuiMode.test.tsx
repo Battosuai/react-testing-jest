@@ -1,11 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../test-util";
 import MuiMode from "./MuiMode";
-import { AppProvider } from "../../providers/AppProvider";
 
 describe("MuiMode", () => {
   it("renders correctly", () => {
     render(<MuiMode />, {
-      wrapper: AppProvider,
+      //   wrapper: AppProvider,
     });
     const headingElement = screen.getByRole("heading");
     expect(headingElement).toHaveTextContent("dark mode");
