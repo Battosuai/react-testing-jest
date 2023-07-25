@@ -4,7 +4,7 @@ import { AppProvider } from "./providers/AppProvider";
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, "wrapper">
+  options?: Omit<RenderOptions, "wrapper">,
 ) => render(ui, { wrapper: AppProvider, ...options });
 
 export * from "@testing-library/react";
